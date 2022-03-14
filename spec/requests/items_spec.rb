@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe "Items", type: :request do
- #let(:valid_attributes) {
- #  :name => 'Record Player',
- #  :description => '1979 Sony HiFi'
- #  } 
+ let(:valid_attributes) {{
+   name: 'Record Player',
+   description: '1979 Sony HiFi'
+  }}
  #let(:invalid_attributes) {
  #  :name => ""
  #  :description => ""
