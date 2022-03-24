@@ -14,14 +14,15 @@ RSpec.describe "Items", type: :request do
       Item.create! valid_attributes 
       get items_url
       expect(response).to be_successful  
+     # expect(response).to include("Items")
     end
   end
 
-  pending "GET /new" do
-    pending "renders a successful response" do
-      
+  describe "GET /new" do
+    it "renders a successful response" do
+      get new_item_path
+      expect(response).to be_successful
     end
-    
   end
 
 
