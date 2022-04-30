@@ -23,7 +23,7 @@ class ItemsController < ApplicationController
     end
     
     def edit
-      @item = .find()
+    #  @item = .find()
     end
     
     def def update
