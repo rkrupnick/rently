@@ -1,10 +1,10 @@
 <%= form_with(model: item) do |form| %>
-  <% if article.errors.any? %>
+  <% if item.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
 
       <ul>
-        <% article.errors.each do |error| %>
+        <% item.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
@@ -12,28 +12,13 @@
   <% end %>
 
   <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
   </div>
 
   <div>
-    <%= form.label :location, style: "display: block" %>
-    <%= form.text_field :location %>
-  </div>
-
-  <div>
-    <%= form.label :excerpt, style: "display: block" %>
-    <%= form.text_field :excerpt %>
-  </div>
-
-  <div>
-    <%= form.label :body, style: "display: block" %>
-    <%= form.text_area :body %>
-  </div>
-
-  <div>
-    <%= form.label :published_at, style: "display: block" %>
-    <%= form.datetime_field :published_at %>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
   </div>
 
   <div>
